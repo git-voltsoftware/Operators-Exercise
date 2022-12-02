@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {   //Exercise 1
-            //create integer variables
             int a = 17;
             int b = 4;
             
@@ -15,10 +14,16 @@
                 Console.WriteLine($" 17/4 {quotient} is {b} remainder is {remainder}.");
             }
 
+            AreaOfCircle();
+        }
 
-
-
-
+        //Exercise2
+        static void AreaOfCircle(){
+            Console.WriteLine("Enter the radius of your circle. ");
+            //double.Parse created a null reference
+            var radius = Convert.ToDouble(Console.ReadLine());
+            var formula = Math.PI * Math.Pow(radius, 2);
+            Console.WriteLine($"Your area of the circle is {formula}.");
 
         }
     }
